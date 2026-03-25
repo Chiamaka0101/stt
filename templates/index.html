@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VocalScribe</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- jsPDF CDN (for PDF download) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>🎤 VocalScribe</h1>
+        <p class="subtitle">Speak or Upload Audio with Ease</p>
+        <p class="subtext">Turn your voice into text in seconds</p>
+    </div>
+
+    <!-- RECORD BUTTON -->
+    <div class="record-section">
+        <button id="recordBtn" class="record-btn">
+            🎙 Start Recording
+        </button>
+    </div>
+
+    <!-- OR DIVIDER -->
+    <div class="divider">
+        <hr><span>OR</span><hr>
+    </div>
+
+    <!-- UPLOAD AREA (FIXED) -->
+<div id="uploadArea" class="upload-box">
+    <p>📁 Upload Audio File</p>
+    <small>Drag & drop or click to upload</small>
+    <input type="file" id="fileInput" hidden accept=".mp3,.wav,.m4a">
+</div>
+
+    <!-- AUDIO PREVIEW -->
+<div class="section-title">Audio Preview</div>
+<audio id="audioPlayer" controls></audio>
+
+<!-- <div class="audio-controls">
+    <button id="playBtn">▶</button>
+    <button id="pauseBtn">⏸</button>
+    <button id="stopBtn">⏹</button>
+</div> -->
+
+    <!-- ✅ NEW TRANSCRIBE BUTTON -->
+<div class="transcribe-section">
+    <button id="transcribeBtn" class="record-btn">
+        🎧 Transcribe Audio
+    </button>
+</div>
+
+    <!-- TRANSCRIPTION -->
+    <div class="section-title">Transcription Output</div>
+    <textarea id="transcriptionText" placeholder="Your transcribed text appears here..." readonly></textarea>
+
+    <!-- ACTION BUTTONS -->
+    <div class="actions">
+        <button id="editBtn">✏ Edit</button>
+        <button id="copyBtn">📋 Copy</button>
+        <button id="clearBtn">🗑 Clear</button>
+    </div>
+
+    <!-- EXPORT -->
+    <div class="section-title">Export Options</div>
+    <div class="export">
+        <button id="downloadPDF">⬇ Download as PDF</button>
+        <button id="downloadTXT">⬇ Download as TXT</button>
+    </div>
+
+</div>
+
+<!-- MAIN JAVASCRIPT -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>
